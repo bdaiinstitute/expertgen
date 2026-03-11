@@ -51,35 +51,34 @@
           <br>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://daffan.github.io/">Zifan Xu</a><sup>1</sup><sup>*</sup>,</span>
+              <a href="https://daffan.github.io/">Zifan Xu</a><sup>1,2</sup><sup>*</sup>,</span>
             <span class="author-block">
-              <a href="https://nikepupu.github.io/">Ran Gong</a><sup>2</sup>,</span>
+              <a href="https://nikepupu.github.io/">Ran Gong</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=zKWcawIAAAAJ&hl=en">Maria Vittoria Minniti</a><sup>2</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=zKWcawIAAAAJ&hl=en">Maria Vittoria Minniti</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/ahmet-salih-gundogdu/">Ahmet Salih Gundogdu</a><sup>2</sup>,</span>
+              <a href="https://www.linkedin.com/in/ahmet-salih-gundogdu/">Ahmet Salih Gundogdu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://eric-rosen.github.io/">Eric Rosen</a><sup>2</sup>,</span>
+              <a href="https://eric-rosen.github.io/">Eric Rosen</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://kausiksivakumar.github.io/">Kausik Sivakumar</a><sup>2</sup>,</span>
+              <a href="https://kausiksivakumar.github.io/">Kausik Sivakumar</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/riedana-yan-798471192/">Riedana Yan</a><sup>2</sup>,</span>
+              <a href="https://www.linkedin.com/in/riedana-yan-798471192/">Riedana Yan</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://wzx16.github.io/">Zixing Wang</a><sup>3</sup>,</span>
+              <a href="https://wzx16.github.io/">Zixing Wang</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=zumK8HkAAAAJ&hl=en">Di Deng</a><sup>2</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=zumK8HkAAAAJ&hl=en">Di Deng</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://www.cs.utexas.edu/~pstone/">Peter Stone</a><sup>1</sup>,</span>
+              <a href="https://www.cs.utexas.edu/~pstone/">Peter Stone</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://keke-220.github.io/">Xiaohan Zhang</a><sup>2</sup><sup>&dagger;</sup>,</span>
+              <a href="https://keke-220.github.io/">Xiaohan Zhang</a><sup>1</sup><sup>&dagger;</sup>,</span>
             <span class="author-block">
-              <a href="https://sites.google.com/view/karlschmeckpeper">Karl Schmeckpeper</a><sup>2</sup><sup>&dagger;</sup></span>
+              <a href="https://sites.google.com/view/karlschmeckpeper">Karl Schmeckpeper</a><sup>1</sup><sup>&dagger;</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Texas at Austin,</span>
-            <span class="author-block"><sup>2</sup>Robotics and AI Institute,</span>
-            <span class="author-block"><sup>3</sup>Purdue University</span>
+            <span class="author-block"><sup>1</sup>Robotics and AI Institute,</span>
+            <span class="author-block"><sup>2</sup>University of Texas at Austin</span>
           </div>
           <div class="is-size-6 publication-authors">
             <span class="author-block"><sup>*</sup> The work is done while Zifan was an intern at RAI.</span>
@@ -90,7 +89,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/xxxxxx"
+                <a href="./static/pdf/_RSS_2026__ExpertGen.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -118,15 +117,15 @@
                 </a>
               </span> -->
               <!-- Code Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+              <span class="link-block">
+                <a href="https://github.com/" disabled
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming Soon)</span>
                   </a>
-              </span> -->
+              </span>
               <!-- Dataset Link. -->
               <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
@@ -346,18 +345,21 @@
                 <video class="compare-video" controls muted autoplay loop playsinline>
                   <source src="./static/videos/compare/task_0_expertgen.mp4" type="video/mp4">
                 </video>
+                <p class="has-text-centered">Robust recovery from banana dropping</p>
               </div>
               <div class="column is-4">
                 <p class="has-text-centered"><b>Diffusion Policy</b></p>
                 <video class="compare-video" controls muted autoplay loop playsinline>
                   <source src="./static/videos/compare/task_0_base.mp4" type="video/mp4">
                 </video>
+                <p class="has-text-centered">Fails to recover from banana dropping</p>
               </div>
               <div class="column is-4">
                 <p class="has-text-centered"><b>Residual RL</b></p>
                 <video class="compare-video" controls muted autoplay loop playsinline>
                   <source src="./static/videos/compare/task_0_residual.mp4" type="video/mp4">
                 </video>
+                <p class="has-text-centered">Fails to recover from banana dropping</p>
               </div>
             </div>
           </div>
@@ -387,25 +389,29 @@
           </div>
 
           <div id="compare-task-6" class="compare-task-panel is-compare-hidden">
-            <h3 class="title is-4">Push Pear</h3>
             <div class="columns is-variable is-3 is-centered compare-row">
               <div class="column is-4">
                 <p class="has-text-centered"><b>ExpertGen</b></p>
                 <video class="compare-video" controls muted autoplay loop playsinline>
                   <source src="./static/videos/compare/task_6_expertgen.mp4" type="video/mp4">
                 </video>
+                <p class="has-text-centered">Close-loop control that pushes</p>
+                <p class="has-text-centered">the pear to the exact goal position</p>
               </div>
               <div class="column is-4">
                 <p class="has-text-centered"><b>Diffusion Policy</b></p>
                 <video class="compare-video" controls muted autoplay loop playsinline>
                   <source src="./static/videos/compare/task_6_base.mp4" type="video/mp4">
                 </video>
+                <p class="has-text-centered">Open-loop control with the pear</p>
+                <p class="has-text-centered">oscillating around the goal position</p>
               </div>
               <div class="column is-4">
                 <p class="has-text-centered"><b>Residual RL</b></p>
                 <video class="compare-video" controls muted autoplay loop playsinline>
                   <source src="./static/videos/compare/task_6_residual.mp4" type="video/mp4">
                 </video>
+                <p class="has-text-centered">Fails to push the pear to the goal position</p>
               </div>
             </div>
           </div>
@@ -457,7 +463,7 @@
                 data-anytask-target="lift-pear"
                 aria-controls="anytask-panel-lift-pear"
                 aria-selected="false">
-          Lift Pear
+          Lift Peach
         </button>
         <button class="button is-link is-light"
                 type="button"
@@ -673,24 +679,6 @@
       <!-- Stack Banana. -->
       <!-- <h3 class="title is-4">Stack Banana</h3> -->
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/anytask/3/01/env_0_recording.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/anytask/3/02/env_1_recording.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/anytask/3/01/env_2_recording.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/anytask/3/01/env_3_recording.mp4"
@@ -724,6 +712,24 @@
         <div class="item item-towel">
           <video poster="" id="towel" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/anytask/3/02/env_8_recording.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/anytask/3/01/env_0_recording.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/anytask/3/02/env_1_recording.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/anytask/3/01/env_2_recording.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -1110,12 +1116,6 @@
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-towel">
-          <video poster="" id="towel" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/automate/00783/env_8_recording.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
       </div>
       <br/>
       </div>
@@ -1169,12 +1169,6 @@
         <div class="item item-toby">
           <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/automate/00081/env_7_recording.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-towel">
-          <video poster="" id="towel" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/automate/00081/env_8_recording.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -1234,12 +1228,6 @@
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-towel">
-          <video poster="" id="towel" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/automate/00703/env_8_recording.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
       </div>
       <br/>
       </div>
@@ -1293,12 +1281,6 @@
         <div class="item item-toby">
           <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/automate/00032/env_7_recording.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-towel">
-          <video poster="" id="towel" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/automate/00032/env_8_recording.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -1358,12 +1340,6 @@
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-towel">
-          <video poster="" id="towel" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/automate/00581/env_8_recording.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
       </div>
       <br/>
       </div>
@@ -1417,12 +1393,6 @@
         <div class="item item-toby">
           <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/automate/00506/env_7_recording.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-towel">
-          <video poster="" id="towel" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/automate/00506/env_8_recording.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -1482,12 +1452,6 @@
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-towel">
-          <video poster="" id="towel" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/automate/00175/env_8_recording.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
       </div>
       <br/>
       </div>
@@ -1541,12 +1505,6 @@
         <div class="item item-toby">
           <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/automate/00308/env_7_recording.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-towel">
-          <video poster="" id="towel" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/automate/00308/env_8_recording.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -1607,12 +1565,7 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>TBD</code></pre>
   </div>
 </section>
 

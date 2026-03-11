@@ -107,7 +107,7 @@ body {
 .publication-title {
     font-family: 'Google Sans', sans-serif;
     /* Override Bulma's `.title.is-1` sizing to be a bit smaller and responsive. */
-    font-size: clamp(2.8rem, 2vw + 2.9rem, 2.3rem);
+    font-size: clamp(2.3rem, 2vw + 1.9rem, 2.8rem);
     line-height: 1.15;
 }
 
@@ -198,4 +198,252 @@ body {
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+/* =========================
+   RAI-inspired theme layer
+   ========================= */
+
+:root {
+  --rai-purple: #6c48fd;
+  --rai-mint: #28ea93;
+  --rai-cyan: #2fd2dd;
+
+  --rai-ink: #0b1020;
+  --rai-ink-2: #111a33;
+
+  --rai-border: rgba(17, 26, 51, 0.12);
+  --rai-shadow: 0 10px 30px rgba(17, 26, 51, 0.10);
+
+  /* Flat, minimalist surfaces */
+  --rai-bg: #ffffff;
+  --rai-bg-soft: rgba(108, 72, 253, 0.05);
+  --rai-bg-soft-2: rgba(17, 26, 51, 0.02);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--rai-ink);
+  background: var(--rai-bg);
+}
+
+::selection {
+  background: rgba(108, 72, 253, 0.25);
+}
+
+.title,
+.subtitle,
+.publication-title,
+.publication-authors {
+  font-family: "Google Sans", "Noto Sans", sans-serif;
+}
+
+.content {
+  line-height: 1.65;
+}
+
+/* Links */
+a {
+  color: var(--rai-purple);
+  text-decoration-color: rgba(47, 210, 221, 0.55);
+  text-underline-offset: 3px;
+}
+a:hover {
+  color: #5131f6;
+}
+
+/* Hero (top title/authors/buttons) */
+.hero:not(.teaser) {
+  background: var(--rai-bg);
+  border-bottom: 1px solid rgba(17, 26, 51, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+.hero:not(.teaser)::before {
+  content: none;
+}
+.hero:not(.teaser) .hero-body {
+  position: relative;
+}
+
+.publication-title {
+  letter-spacing: -0.02em;
+}
+.expertgen-title-icon {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  margin-right: 0.35em;
+  vertical-align: -0.18em;
+  color: var(--rai-ink);
+}
+.expertgen-title-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@media (max-width: 480px) {
+  .expertgen-title-icon {
+    width: 1.05em;
+    height: 1.05em;
+    margin-right: 0.28em;
+    vertical-align: -0.16em;
+  }
+}
+.publication-venue {
+  color: rgba(11, 16, 32, 0.70);
+}
+.publication-authors a {
+  color: var(--rai-purple) !important;
+}
+.publication-authors a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(47, 210, 221, 0.65);
+}
+
+/* Section rhythm + subtle alternation */
+.section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+/* Section titles: flat underline bar (no background fill) */
+h2.title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.55rem;
+}
+h2.title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: min(160px, 58%);
+  border-radius: 999px;
+  background: var(--rai-cyan);
+  opacity: 0.95;
+}
+
+/* Buttons */
+.button {
+  border-radius: 999px;
+  transition: transform 0.12s ease, box-shadow 0.20s ease, filter 0.20s ease, background-color 0.20s ease;
+}
+.button:focus {
+  box-shadow: 0 0 0 4px rgba(108, 72, 253, 0.18) !important;
+}
+
+/* Hero CTA buttons (Paper / arXiv) */
+.publication-links .button.is-dark {
+  background: var(--rai-purple);
+  border: 1px solid rgba(108, 72, 253, 0.25);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 10px 22px rgba(17, 26, 51, 0.10);
+}
+.publication-links .button.is-dark:hover {
+  transform: translateY(-1px);
+  background: #5a3bfc;
+  box-shadow: 0 14px 28px rgba(17, 26, 51, 0.14);
+}
+
+/* Selector button groups (Sim2Real / AnyTask / Automate / Baselines) */
+.sim2real-selector .button,
+.anytask-selector .button,
+.automate-selector .button,
+.compare-task-selector .button {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--rai-border);
+  color: var(--rai-ink);
+  font-weight: 650;
+  backdrop-filter: blur(8px);
+}
+.sim2real-selector .button:hover,
+.anytask-selector .button:hover,
+.automate-selector .button:hover,
+.compare-task-selector .button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(17, 26, 51, 0.10);
+}
+
+/* Selected state (override existing blue) */
+.sim2real-selector .button.is-selected,
+.anytask-selector .button.is-selected,
+.automate-selector .button.is-selected,
+.compare-task-selector .button.is-selected {
+  background: var(--rai-purple) !important;
+  border-color: rgba(47, 210, 221, 0.35) !important;
+  color: #fff !important;
+  box-shadow: 0 12px 26px rgba(17, 26, 51, 0.14);
+}
+.sim2real-selector .button.is-selected:hover,
+.anytask-selector .button.is-selected:hover,
+.automate-selector .button.is-selected:hover,
+.compare-task-selector .button.is-selected:hover {
+  filter: brightness(0.98);
+}
+
+/* Media surfaces */
+.teaser-image,
+.teaser-video,
+.compare-video,
+.publication-video {
+  border: 1px solid rgba(17, 26, 51, 0.08);
+  box-shadow: var(--rai-shadow);
+}
+
+.teaser-image {
+  border-radius: 18px;
+}
+.teaser-video,
+.compare-video {
+  border-radius: 16px;
+}
+
+/* Carousel items look like cards */
+.results-carousel .item {
+  border: 1px solid rgba(108, 72, 253, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 14px 30px rgba(17, 26, 51, 0.08);
+  background: #fff;
+}
+
+/* Light hero sections (e.g., AnyTask) */
+.hero.is-light {
+  background: var(--rai-bg) !important;
+  border-top: 1px solid rgba(17, 26, 51, 0.06);
+  border-bottom: 1px solid rgba(17, 26, 51, 0.06);
+}
+
+/* BibTeX block */
+pre {
+  border-radius: 14px;
+  background: rgba(11, 16, 32, 0.96);
+  color: #e8ecff;
+  border: 1px solid rgba(47, 210, 221, 0.25);
+  box-shadow: 0 18px 50px rgba(17, 26, 51, 0.18);
+}
+pre code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Footer -> dark, with brand accents */
+.footer {
+  background: var(--rai-ink);
+  color: rgba(255, 255, 255, 0.80);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer a {
+  color: rgba(255, 255, 255, 0.92);
+}
+.footer a:hover {
+  color: var(--rai-mint);
+}
+.footer .icon-link {
+  color: rgba(255, 255, 255, 0.88);
 }
