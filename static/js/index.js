@@ -14,8 +14,8 @@ function preloadInterpolationImages() {
 
 function setInterpolationImage(i) {
   var image = interp_images[i];
-  image.ondragstart = function() { return false; };
-  image.oncontextmenu = function() { return false; };
+  image.ondragstart = function () { return false; };
+  image.oncontextmenu = function () { return false; };
   var wrapper = document.getElementById('interpolation-image-wrapper');
   if (!wrapper) return;
   wrapper.innerHTML = '';
@@ -60,12 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
       // Pause hidden videos so only one plays.
       var video = panel.querySelector('video');
       if (video && !shouldShow) {
-        try { video.pause(); } catch (e) {}
+        try { video.pause(); } catch (e) { }
       }
       // Play the shown video only when this was triggered by a user click.
       if (video && shouldShow && fromUserGesture) {
-        try { video.muted = true; } catch (e) {}
-        try { video.play(); } catch (e) {}
+        try { video.muted = true; } catch (e) { }
+        try { video.play(); } catch (e) { }
       }
     });
   }
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
     // Initialize to the first button's target.
-    setSim2RealActive(sim2realButtons[0].getAttribute('data-sim2real-target'), false);
+    setSim2RealActive(sim2realButtons[0].getAttribute('data-sim2real-target'), true);
   }
 
   // AnyTask per-task selector (optional — only if present in DOM)
@@ -96,20 +96,19 @@ document.addEventListener('DOMContentLoaded', function () {
       // Pause hidden videos so they don't keep playing in the background.
       var videos = panel.querySelectorAll('video');
       if (!shouldShow) {
-        videos.forEach(function (v) { try { v.pause(); } catch (e) {} });
+        videos.forEach(function (v) { try { v.pause(); } catch (e) { } });
       }
       // Play shown videos on user click (autoplay won't re-trigger on unhide).
       if (shouldShow && fromUserGesture) {
         videos.forEach(function (v) {
-          if (!v.hasAttribute('autoplay')) return;
-          try { v.muted = true; } catch (e) {}
-          try { v.play(); } catch (e) {}
+          try { v.muted = true; } catch (e) { }
+          try { v.play(); } catch (e) { }
         });
       }
     });
 
     // Let bulma-carousel recalc widths after showing a different panel.
-    try { window.dispatchEvent(new Event('resize')); } catch (e) {}
+    try { window.dispatchEvent(new Event('resize')); } catch (e) { }
   }
   if (anytaskButtons.length && anytaskPanels.length) {
     anytaskButtons.forEach(function (btn) {
@@ -117,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setAnyTaskActive(btn.getAttribute('data-anytask-target'), true);
       });
     });
-    setAnyTaskActive(anytaskButtons[0].getAttribute('data-anytask-target'), false);
+    setAnyTaskActive(anytaskButtons[0].getAttribute('data-anytask-target'), true);
   }
 
   // AutoMate per-asset selector (optional — only if present in DOM)
@@ -135,18 +134,17 @@ document.addEventListener('DOMContentLoaded', function () {
       panel.classList.toggle('is-automate-hidden', !shouldShow);
       var videos = panel.querySelectorAll('video');
       if (!shouldShow) {
-        videos.forEach(function (v) { try { v.pause(); } catch (e) {} });
+        videos.forEach(function (v) { try { v.pause(); } catch (e) { } });
       }
       if (shouldShow && fromUserGesture) {
         videos.forEach(function (v) {
-          if (!v.hasAttribute('autoplay')) return;
-          try { v.muted = true; } catch (e) {}
-          try { v.play(); } catch (e) {}
+          try { v.muted = true; } catch (e) { }
+          try { v.play(); } catch (e) { }
         });
       }
     });
 
-    try { window.dispatchEvent(new Event('resize')); } catch (e) {}
+    try { window.dispatchEvent(new Event('resize')); } catch (e) { }
   }
   if (automateButtons.length && automatePanels.length) {
     automateButtons.forEach(function (btn) {
@@ -154,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setAutoMateActive(btn.getAttribute('data-automate-target'), true);
       });
     });
-    setAutoMateActive(automateButtons[0].getAttribute('data-automate-target'), false);
+    setAutoMateActive(automateButtons[0].getAttribute('data-automate-target'), true);
   }
 
   // Baselines comparison task selector (optional — only if present in DOM)
@@ -171,13 +169,12 @@ document.addEventListener('DOMContentLoaded', function () {
       panel.classList.toggle('is-compare-hidden', !shouldShow);
       var videos = panel.querySelectorAll('video');
       if (!shouldShow) {
-        videos.forEach(function (v) { try { v.pause(); } catch (e) {} });
+        videos.forEach(function (v) { try { v.pause(); } catch (e) { } });
       }
       if (shouldShow && fromUserGesture) {
         videos.forEach(function (v) {
-          if (!v.hasAttribute('autoplay')) return;
-          try { v.muted = true; } catch (e) {}
-          try { v.play(); } catch (e) {}
+          try { v.muted = true; } catch (e) { }
+          try { v.play(); } catch (e) { }
         });
       }
     });
@@ -188,13 +185,13 @@ document.addEventListener('DOMContentLoaded', function () {
         setCompareTaskActive(btn.getAttribute('data-compare-task'), true);
       });
     });
-    setCompareTaskActive(compareTaskButtons[0].getAttribute('data-compare-task'), false);
+    setCompareTaskActive(compareTaskButtons[0].getAttribute('data-compare-task'), true);
   }
 
   // Interpolation widget (optional — only if present in DOM)
-  preloadInterpolationImages();
   var slider = document.getElementById('interpolation-slider');
   if (slider) {
+    preloadInterpolationImages();
     slider.addEventListener('input', function () {
       setInterpolationImage(this.value);
     });
